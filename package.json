@@ -1,0 +1,12 @@
+{
+  "name": "Prime numbers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pmNums.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Edgar Hakobkekhvyan",
+  "license": "ISC"
+}
