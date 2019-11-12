@@ -10,9 +10,15 @@ module.exports = {
       if(num % div === 0){
         return false;
       }
-
       div++;
     }
     return true;
+  },
+
+
+  print: function (arr) {
+    for(let i = 0; i < arr.length; i++){
+      console.log(arr[i]);
+    }
   }
-}
+};
