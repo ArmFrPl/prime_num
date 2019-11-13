@@ -16,16 +16,12 @@ function primesFromRange(num1, num2) {
     if(primes.length){
       return primes;
     }else{
-      return "there are no prime numbers";
+      return "Prime numbers missing! Finder gets some amount of money!";
     }
   }else{
-    return "";
+    return "There is non positive number in input";
   }
 }
 
 let res = primesFromRange(num1,num2);
-if(typeof res !== "string"){
-  print(res);
-}else{
-  console.log("one of numbers are not positive");
-}
+print(res);

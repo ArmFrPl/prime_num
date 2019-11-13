@@ -17,8 +17,12 @@ module.exports = {
 
 
   print: function (arr) {
-    for(let i = 0; i < arr.length; i++){
-      console.log(arr[i]);
+    if(typeof arr === "string"){
+      console.log(arr)
+    }else{
+      for(let i = 0; i < arr.length; i++){
+        console.log(arr[i]);
+      }
     }
   }
 };
