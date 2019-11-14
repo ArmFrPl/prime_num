@@ -1,28 +1,39 @@
-module.exports = {
-  isPrime: function (num) {
-    if (num <= 1){
+function isPrime (num) {
+  if (num <= 1){
+    return false;
+  }
+
+  let div = 2;
+
+  while(div <= Math.sqrt(num)){
+    if(num % div === 0){
       return false;
     }
+    div++;
+  }
+  return true;
+}
 
-    let div = 2;
+module.exports = {
+  findPrimes: function(num1, num2){
+    if(num1 > 0 && num2 > 0) {
+      let primes = [];
 
-    while(div <= Math.sqrt(num)){
-      if(num % div === 0){
-        return false;
+      for (let i = num1; i <= num2; i++) {
+        if(isPrime(i)) {
+          primes.push(i)
+        }
       }
-      div++;
+      return primes;
     }
-    return true;
   },
 
-
   print: function (arr) {
-    if(typeof arr === "string"){
-      console.log(arr)
+    if(!arr.length){
+      console.log("Prime numbers missing! Finder gets some amount of money!");
     }else{
-      for(let i = 0; i < arr.length; i++){
+      for(let i = 0; i < arr.length; i++)
         console.log(arr[i]);
-      }
     }
   }
-};
+}
